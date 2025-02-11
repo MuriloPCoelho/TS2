@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router";
+import Recibos from "../pages/recibos";
 
 export const router = createBrowserRouter(
     [
@@ -8,7 +9,7 @@ export const router = createBrowserRouter(
         },
         {
             path: "recibos",
-            element: <>recibos</>
+            element: <Recibos />
         },
         {
             path: "mensagens",
