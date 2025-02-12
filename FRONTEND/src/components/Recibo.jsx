@@ -1,8 +1,9 @@
 import logo from '../assets/ts-logo.jpg'
+import assinatura from '../assets/assinatura-ts.jpg'
 
 const Recibo = () => {
   return (
-    <div id='recibo' className="bg-branco rounded-xs text-preto w-3xl p-3 flex flex-col gap-2">
+    <div id='recibo' className="bg-[#f9fdfe] rounded-xs text-preto w-3xl p-3 flex flex-col gap-2">
         <div id="recibo-header" className="flex justify-between items-center border-b pb-2">
             <div className="text-xs font-semibold flex items-center gap-2 w-full">
                 <div className="w-12 h-12">
@@ -37,7 +38,22 @@ const Recibo = () => {
             {/* @TODO lista de itens */}
           </div>
         </div>
-        <div id="recibo-footer" className="pt-2 border-t">footer</div>
+        <div id="recibo-footer" className="pt-2 border-t">
+          <div className='flex gap-1'>
+            <span>Canoas,</span><span>10/10/2000</span>
+          </div>
+          <div className='flex'>
+            <div>
+              Av. Inconfidência, 740 - Marechal Rondon, Canoas - RS, 92020-342
+            </div>
+            <div>
+              <div className='w-72 rotate-[1.55deg]'>
+                <img src={assinatura} alt="assinatura" />
+              </div>
+              <div className='text-center border-t z-10 relative'>Assinatura do responsável</div>
+            </div>
+          </div>
+        </div>
     </div>
   )
 }
