@@ -3,7 +3,7 @@ import Recibo from "../../components/recibo";
 
 
 const Recibos = () => {
-  let div = document.getElementById("teste");
+  let div = document.getElementById("recibo");
 
   const clicou = () => {
     html2canvas(div).then((canvas) => {

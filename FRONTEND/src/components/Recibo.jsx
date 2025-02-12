@@ -2,7 +2,7 @@ import logo from '../assets/ts-logo.jpg'
 
 const Recibo = () => {
   return (
-    <div className="bg-branco rounded-xs text-preto w-3xl p-3 flex flex-col gap-2">
+    <div id='recibo' className="bg-branco rounded-xs text-preto w-3xl p-3 flex flex-col gap-2">
         <div id="recibo-header" className="flex justify-between items-center border-b pb-2">
             <div className="text-xs font-semibold flex items-center gap-2 w-full">
                 <div className="w-12 h-12">
@@ -21,7 +21,22 @@ const Recibo = () => {
               </div>
             </div>
         </div>
-        <div id="recibo-body" className="">body</div>
+        <div id="recibo-body" className="flex flex-col gap-5 py-2">
+          <div>
+            <span className='font-semibold'>Recebemos de: </span>
+            <span>Fulano de Tal</span>
+          </div>
+          <div>
+            <span className='font-semibold'>A importância de: </span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
+            {/* @TODO valor por extenso do total */}
+          </div>
+          <div>
+            <span className='font-semibold'>Correspondente a: </span>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At magnam nostrum nobis quis doloribus quaerat ex perferendis consequatur cum dolor!</span>
+            {/* @TODO lista de itens */}
+          </div>
+        </div>
         <div id="recibo-footer" className="pt-2 border-t">footer</div>
     </div>
   )
