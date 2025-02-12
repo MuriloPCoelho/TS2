@@ -5,7 +5,7 @@ const Recibo = () => {
   return (
     <div
       id="recibo"
-      className="bg-[#f9fdfe] rounded-xs text-preto w-3xl py-4 px-6 flex flex-col gap-2"
+      className="bg-[#f9fdfe] rounded-xs text-preto aspect-[3/2] max-w-3xl py-4 px-6 flex flex-col gap-2"
     >
       <div
         id="recibo-header"
@@ -24,9 +24,8 @@ const Recibo = () => {
         </div>
         <div className="font-bold text-3xl w-full text-center">RECIBO</div>
         <div className="w-full flex justify-end">
-          <div className="bg-ts-20 px-4 py-2 rounded font-semibold flex gap-1 w-max">
-            R$
-            <span>1440,00</span>
+          <div className="bg-ts-20 px-[16px] py-[8px] rounded font-semibold">
+            <div className="">R$ 1440,00</div>
           </div>
         </div>
       </div>

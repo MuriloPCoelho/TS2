@@ -6,8 +6,17 @@ const Recibos = () => {
     let div = document.getElementById("recibo");
 
     html2canvas(div).then((canvas) => {
-      document.body.appendChild(canvas);
+      const imgURL = canvas.toDataURL("image/png");
+      downloadImage(imgURL, 'nome-cliente.png');
     });
+  };
+
+  const downloadImage = (dataURL, fileName) => {
+    let anchor = document.createElement('a');
+    anchor.href = dataURL;
+    anchor.download = fileName;
+    anchor.click();
+    anchor.remove();
   };
 
   return (
