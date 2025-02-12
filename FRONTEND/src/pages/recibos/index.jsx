@@ -1,14 +1,11 @@
 import html2canvas from "html2canvas";
 import Recibo from "../../components/recibo";
 
-
 const Recibos = () => {
-  let div = document.getElementById("recibo");
-
   const clicou = () => {
-    html2canvas(div).then((canvas) => {
-      console.log("clicou");
+    let div = document.getElementById("recibo");
 
+    html2canvas(div).then((canvas) => {
       document.body.appendChild(canvas);
     });
   };
