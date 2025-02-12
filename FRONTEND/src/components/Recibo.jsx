@@ -1,11 +1,13 @@
 import logo from "../assets/ts-logo.jpg";
 import Assinatura from "./Assinatura";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Recibo = () => {
   return (
     <div
       id="recibo"
-      className="bg-[#f9fdfe] rounded-xs text-preto aspect-[3/2] max-w-3xl py-4 px-6 flex flex-col gap-2"
+      className="bg-[#f9fdfe] rounded-xs text-preto aspect-[3/2] max-w-2xl py-4 px-6 flex flex-col gap-2"
     >
       <div
         id="recibo-header"
@@ -29,7 +31,7 @@ const Recibo = () => {
           </div>
         </div>
       </div>
-      <div id="recibo-body" className="flex flex-col gap-5 py-2">
+      <div id="recibo-body" className="flex flex-col gap-5 py-2 h-full">
         <div>
           <span className="font-semibold">Recebemos de: </span>
           <span>Fulano de Tal</span>
@@ -49,17 +51,21 @@ const Recibo = () => {
           {/* @TODO lista de itens */}
         </div>
       </div>
-      <div id="recibo-footer" className="pt-2 border-t flex gap-40">
+      <div id="recibo-footer" className="pt-2 border-t flex gap-20">
         <div>
           <div className="flex gap-1 pb-2">
             <span>Canoas,</span>
             <span>10/10/2000</span>
           </div>
           <div className="text-sm">
-            Av. Inconfidência, 740 - Marechal Rondon, Canoas - RS, 92020-342
+            <div>
+              <FontAwesomeIcon icon={faMapMarkerAlt} /> Av. Inconfidência, 740 - Marechal Rondon, Canoas - RS, 92020-342
+            </div>
+            <div>(51) 99360-7472</div>
+            <div>triskasantostennis@hotmail.com</div>
           </div>
         </div>
-        <div className="p-5">
+        <div className="py-3 px-1">
           <Assinatura />
         </div>
       </div>
