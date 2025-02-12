@@ -50,15 +50,17 @@ const Recibo = () => {
           {/* @TODO lista de itens */}
         </div>
       </div>
-      <div id="recibo-footer" className="pt-2 border-t">
-        <div className="flex gap-1">
-          <span>Canoas,</span>
-          <span>10/10/2000</span>
-        </div>
-        <div className="flex gap-40">
-          <div>
+      <div id="recibo-footer" className="pt-2 border-t flex gap-40">
+        <div>
+          <div className="flex gap-1 pb-2">
+            <span>Canoas,</span>
+            <span>10/10/2000</span>
+          </div>
+          <div className="text-sm">
             Av. Inconfidência, 740 - Marechal Rondon, Canoas - RS, 92020-342
           </div>
+        </div>
+        <div className="p-5">
           <Assinatura />
         </div>
       </div>
