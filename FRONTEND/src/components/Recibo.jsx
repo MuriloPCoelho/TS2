@@ -1,7 +1,12 @@
 import logo from "../assets/ts-logo.jpg";
 import Assinatura from "./Assinatura";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faMapMarkerAlt,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import Icon from "./Icon";
 
 const Recibo = () => {
   return (
@@ -51,22 +56,29 @@ const Recibo = () => {
           {/* @TODO lista de itens */}
         </div>
       </div>
-      <div id="recibo-footer" className="pt-2 border-t flex gap-20">
+      <div className="flex gap-1 font-semibold">
+        <span>Canoas,</span>
+        <span>10 de Janeiro de 2000</span>
+      </div>
+      <div id="recibo-footer" className="pt-4 border-t ">
         <div>
-          <div className="flex gap-1 pb-2">
-            <span>Canoas,</span>
-            <span>10/10/2000</span>
+          <div className="py-3 px-1 w-1/2 ml-auto">
+            <Assinatura />
           </div>
-          <div className="text-sm">
+          <div className="text-sm flex flex-col gap-2">
             <div>
-              <FontAwesomeIcon icon={faMapMarkerAlt} /> Av. Inconfidência, 740 - Marechal Rondon, Canoas - RS, 92020-342
+              <Icon icon={faPhone} /> (51) 99360-7472
             </div>
-            <div>(51) 99360-7472</div>
-            <div>triskasantostennis@hotmail.com</div>
+            <div>
+              <Icon icon={faEnvelope} /> triskasantostennis@hotmail.com
+            </div>
+            <div>
+              <Icon icon={faMapMarkerAlt} />{" "}
+              <span className="whitespace-nowrap">
+                Av. Inconfidência, 740 - Marechal Rondon, Canoas - RS, 92020-342
+              </span>
+            </div>
           </div>
-        </div>
-        <div className="py-3 px-1">
-          <Assinatura />
         </div>
       </div>
     </div>
