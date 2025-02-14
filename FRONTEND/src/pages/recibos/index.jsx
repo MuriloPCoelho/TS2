@@ -1,22 +1,20 @@
-import html2canvas from "html2canvas";
 import Recibo from "../../components/recibo";
+import * as htmlToImage from 'html-to-image';
 
 const Recibos = () => {
   const clicou = () => {
-    let div = document.getElementById("recibo");
+    let node = document.getElementById("recibo");
 
-    html2canvas(div).then((canvas) => {
-      const imgURL = canvas.toDataURL("image/png");
-      downloadImage(imgURL, 'nome-cliente.png');
-    });
-  };
-
-  const downloadImage = (dataURL, fileName) => {
-    let anchor = document.createElement('a');
-    anchor.href = dataURL;
-    anchor.download = fileName;
-    anchor.click();
-    anchor.remove();
+    htmlToImage
+      .toPng(node)
+      .then((dataUrl) => {
+        const img = new Image();
+        img.src = dataUrl;
+        document.body.appendChild(img);
+      })
+      .catch((err) => {
+        console.error("oops, something went wrong!", err);
+      });
   };
 
   return (

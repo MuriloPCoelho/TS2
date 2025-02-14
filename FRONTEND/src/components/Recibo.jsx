@@ -1,6 +1,6 @@
 import logo from "../assets/ts-logo.jpg";
 import Assinatura from "./Assinatura";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faEnvelope,
   faMapMarkerAlt,
